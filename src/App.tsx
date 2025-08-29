@@ -12,8 +12,8 @@ function App() {
             {/*<ParentComponent />*/}
             {/*<MemoParentComponent />*/}
             {/*<UseCallbackParentComponent />*/}
-            <UseMemoParentComponent />
-            {/*<CompilerParentComponent />*/}
+            {/*<UseMemoParentComponent />*/}
+            <CompilerParentComponent />
         </div>
     </>
   )

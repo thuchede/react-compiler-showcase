@@ -3,6 +3,7 @@ import {getRandomHexColor} from "../utils/getRandomHexColor.ts";
 import {Container} from "./Container.tsx";
 
 export const CompilerParentComponent = () => {
+    'use memo';
     const [count, setCount] = useState(0)
     const randomNumber = Math.random()
     const [prop, setProp] = useState(Math.random().toFixed(2))
@@ -39,6 +40,7 @@ export const CompilerParentComponent = () => {
 }
 
 const CompilerChildComponent = () => {
+    'use memo';
     const rand = Math.random()
     const bg = getRandomHexColor()
     return <Container>
