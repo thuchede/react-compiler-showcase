@@ -8,7 +8,7 @@ export const UseMemoParentComponent = () => {
     const [prop, setProp] = useState(Math.random().toFixed(2))
     const bg = getRandomHexColor()
     const handleClick = useCallback(() => {console.log(`Yay!`)}, [])
-    const result = mightComputeForQuiteSomeTime()
+    const result = useMemo(() => mightComputeForQuiteSomeTime(), [])
 
     return <section style={{backgroundColor: bg}}>
         <h1>UseMemo Parent Component</h1>

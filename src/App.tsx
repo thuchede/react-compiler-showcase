@@ -11,8 +11,8 @@ function App() {
         <div className="card">
             {/*<ParentComponent />*/}
             {/*<MemoParentComponent />*/}
-            <UseCallbackParentComponent />
-            {/*<UseMemoParentComponent />*/}
+            {/*<UseCallbackParentComponent />*/}
+            <UseMemoParentComponent />
             {/*<CompilerParentComponent />*/}
         </div>
     </>
