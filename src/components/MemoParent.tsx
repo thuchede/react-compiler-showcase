@@ -43,7 +43,7 @@ const MemoChildComponent = memo(() => {
     }
 )
 
-const MemoChildComponentWithProp = ({prop, handleClick}: { prop: string, handleClick?: () => void }) => {
+const MemoChildComponentWithProp = memo(({prop, handleClick}: { prop: string, handleClick?: () => void }) => {
     const randomNumber = Math.random()
     const bg = getRandomHexColor()
     return <Container>
@@ -58,4 +58,4 @@ const MemoChildComponentWithProp = ({prop, handleClick}: { prop: string, handleC
             }
         </article>
     </Container>
-}
+})
