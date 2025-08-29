@@ -10,8 +10,8 @@ function App() {
     <>
         <div className="card">
             {/*<ParentComponent />*/}
-            <MemoParentComponent />
-            {/*<UseCallbackParentComponent />*/}
+            {/*<MemoParentComponent />*/}
+            <UseCallbackParentComponent />
             {/*<UseMemoParentComponent />*/}
             {/*<CompilerParentComponent />*/}
         </div>

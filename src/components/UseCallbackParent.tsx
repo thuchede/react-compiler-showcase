@@ -68,6 +68,8 @@ const UseCallbackChildComponentWithProp = memo(({prop, handleClick}: { prop: str
             }
         </article>
     </Container>
+} , (prevProps, nextProps) => {
+    return prevProps.prop === nextProps.prop
 })
 // TODO: use a function to check the props?
 //     , (prevProps, nextProps) => {
