@@ -7,7 +7,7 @@ export default defineConfig({
       babel: {
           plugins: [
               ['babel-plugin-react-compiler', {
-                  compilationMode: 'annotation',
+                  // compilationMode: 'annotation',
               }]
           ],
       },
