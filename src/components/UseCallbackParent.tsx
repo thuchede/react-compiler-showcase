@@ -7,9 +7,9 @@ export const UseCallbackParentComponent = () => {
     const randomNumber = Math.random()
     const [prop, setProp] = useState(Math.random().toFixed(2))
     const bg = getRandomHexColor()
-    // const handleClick = () => {
-    //     console.log(`Yay!`)
-    // }
+    const handleClick = () => {
+        console.log(`Yay!`)
+    }
     // const handleClick = useCallback(() => {console.log(`Yay!${randomNumber}`)}, [randomNumber])
 
     return <section style={{backgroundColor: bg}}>
@@ -34,9 +34,7 @@ export const UseCallbackParentComponent = () => {
         <UseCallbackChildComponent/>
         <UseCallbackChildComponentWithProp
             prop={prop}
-            handleClick={() => {
-                console.log(`Yay!`)
-            }}
+            handleClick={handleClick}
         />
     </section>
 }
@@ -68,8 +66,6 @@ const UseCallbackChildComponentWithProp = memo(({prop, handleClick}: { prop: str
             }
         </article>
     </Container>
-} , (prevProps, nextProps) => {
-    return prevProps.prop === nextProps.prop
 })
 // TODO: use a function to check the props?
 //     , (prevProps, nextProps) => {
