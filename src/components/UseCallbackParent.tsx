@@ -7,9 +7,9 @@ export const UseCallbackParentComponent = () => {
     const randomNumber = Math.random()
     const [prop, setProp] = useState(Math.random().toFixed(2))
     const bg = getRandomHexColor()
-    const handleClick = () => {
+    const handleClick = useCallback(() => {
         console.log(`Yay!`)
-    }
+    }, [])
     // const handleClick = useCallback(() => {console.log(`Yay!${randomNumber}`)}, [randomNumber])
 
     return <section style={{backgroundColor: bg}}>
