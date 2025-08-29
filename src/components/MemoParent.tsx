@@ -31,17 +31,17 @@ export const MemoParentComponent = () => {
     </section>
 }
 
-const MemoChildComponent = () => {
-    const rand = Math.random()
-    const bg = getRandomHexColor()
-    return <Container>
-        <article style={{backgroundColor: bg}}>
-            <h2>Child Component A (no props)</h2>
-            <p>Random value: {rand}</p>
-        </article>
-    </Container>
-}
-
+const MemoChildComponent = memo(() => {
+        const rand = Math.random()
+        const bg = getRandomHexColor()
+        return <Container>
+            <article style={{backgroundColor: bg}}>
+                <h2>Child Component A (no props)</h2>
+                <p>Random value: {rand}</p>
+            </article>
+        </Container>
+    }
+)
 
 const MemoChildComponentWithProp = ({prop, handleClick}: { prop: string, handleClick?: () => void }) => {
     const randomNumber = Math.random()
